@@ -1,0 +1,70 @@
+Shashank Kumar Shankar
+7740 McCallum Blvd. Apt 177
+Dallas, Texas
+Email: shank4804@gmail.com
+Website: www.shashankkumar.me 
+LinkedIn: www.linkedin.com/in/shank7485 
+Phone: 4698261417
+
+Education:
+Master of Science in Telecommunications Engineering GPA: 3.5/4
+The University of Texas at Dallas, Richardson, Texas Expected: May 2016
+Courses: Design and Analysis of Computer Algorithms, Advanced Computer Networks, Software Defined Networks, Database Design, Telecommunications Software Design
+
+Bachelor of Engineering in Telecommunications Engineering GPA: 8.4/10
+Visvesvaraya Technological University, Bangalore, India June 2014
+Courses: Object Oriented Programming using C++, Operating System Concepts
+
+Computer Skills:
+Programming Languages: C/C++, Java, Python
+Cloud Technologies: OpenStack, AWS EC2, AWS S3, Heroku, Docker containers
+Web: HTML, CSS (Bootstrap), Python Flask, Jersey RESTful Web Services
+Networking: SDN, NFV, Open vSwitch, OpenFlow, TCP/IP, UDP, MPLS, OSPF, BGP, VXLAN, IMS, HTTP, REST APIs, Sockets
+Mobile: Android
+Databases: Oracle DB, MySQL
+Operating Systems: Ubuntu Linux, Red Hat Enterprise Linux, Windows
+Other: Git, Maven, WireShark, Apache HTTP, Apache Tomcat, Jetty HTTP2 server
+
+Work Experience:
+Tata Consultancy Services, – Integration Intern, NextGen R&D Santa Clara, California (May 2015 – August 2015)
+-Deployed an OpenStack cloud infrastructure on RHEL 7 servers to leverage it as a Network Functions Virtualization Infrastructure.
+-Integrated TCS developed Python based NFV Manager as per ETSI MANO specs on deployed OpenStack cloud.
+-Orchestrated Project Clearwater vIMS VMs using OpenStack HEAT to demonstrate the solution as a Proof of Concept. On completion, VoIP calls could be made between two softphones present in different network subnets to one another inside an OpenStack tenant.
+
+Academic Projects:
+Cloud Media Streaming Service: Java Jersey RESTful Web services, AWS EC2, AWS S3, Android, JSON, Jetty HTTP2 Server
+-Developed a REST API in Jersey REST framework which returns a JSON containing the list of media available on an AWS S3 bucket.
+-Implemented an Android app which parses the JSON and displays the media list so that a user can select a media and make it play on a media player.
+-Developed a REST API to provide a HTTP2 interface to a Java implementation of VLC Media Player to control the player using the android app as a remote.
+
+Internet of Things with Raspberry Pi - Home Surveillance: Java Sockets, Python, Android, Raspberry Pi SoC
+-Provided live MJPEG video stream from Raspberry Pi camera to an Android app remotely over HTTP.
+-Developed an android app to view the live MJPEG video and to control door locks of a home using Java Sockets and Python scripts.
+-Established a way to send alert notification to the Android app using Parse.io RESTful API whenever an activity is detected in the Pi camera.
+
+Layer-3 Firewall app on SDN Controller using OpenFlow and Open vSwitch: Python Pyretic, Mininet
+-Developed a Layer-3 firewall app on top of POX SDN controller which gets access list policies from a user though a CLI.
+-Controller installs flows on vSwitch using OpenFlow based on user policies. The controller also detects DoS attacks by looking for series of ICMP packets.
+
+Design of Flea Market Database: Oracle DB, SQL
+-Designed a Flea Market database by initially analyzing the data requirements and formed the ER diagram.
+-Mapped the ER diagram into 3NF normalized relations and populated it with records using SQL INSERT and UPDATE Queries.
+
+Side Projects:
+Docker container as a Service: URL - https://github.com/shank7485/Dockerized-DeepDream-with-Flask Docker Container, HTML, Python Flask
+-Developed an API using Python Flask to receive image files from multiple users and process them using Google’s Deep Dream A.I. in a Docker container.
+-Wrote python scripts to maintain queues and process the images in parallel using threads to prevent incoming user requests from getting blocked.
+
+Personal Website: URL – http://www.shashankkumar.me HTML, CSS (Bootstrap), Python Flask, Amazon Web Services EC2
+-Built a website in spare time to portray my skills and deployed it on an Apache mod WSGI server in an AWS EC2 instance.
+-Programmed the front-end using HTML, CSS (Bootstrap) and back-end using Python Flask.
+
+Independent-Study/Certifications:
+Completed ‘Cloud Networking’ course offered by the University of Illinois at Urbana-Champaign through Coursera. Verify at: coursera.org/verify/QLKKXFSHMU
+The coursework included the study of Physical data center networks, Network virtualization, Software defined networking, Inter-data center networks.
+
+Volunteering/Activities:
+-Assisted Professor for an Internet of Things project in the Distributed Systems Lab at UT Dallas to develop video streaming functions into the IoT framework.
+-Participated in ‘Hack_UTD’ hackathon and built a method to access a hardware chip as a service through the cloud.
+
+Work Authorization: F1 VISA

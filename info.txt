@@ -1,0 +1,27 @@
+Shashank Kumar Shankar
+7740 McCallum Blvd. #177
+Dallas 
+Texas
+75252
+shank4804@gmail.com
+4698261417
+
+
+Work:
+Integration Intern
+Tata Consultancy Services
+Santa Clara
+05/2015 08/2015
+Integrated Python based NFV Manager onto OpenStack cloud infrastructure. 
+
+Education:
+	
+2014 - 2016
+Masters of Science in Telecommunications Engineering
+3.5
+
+Skills:
+C, C++, Java, Python, OpenStack Juno, AWS EC2, AWS S3, Heroku, Docker container, HTML, CSS (Bootstrap), Python Flask, Jersey RESTful Web Services, Android, Oracle DB, MySQL, Ubuntu Linux, Red Hat Enterprise Linux, Windows, SDN, NFV, Open vSwitch, OpenFlow, TCP/IP, UDP, MPLS, OSPF, BGP, SIP, IMS, HTTP, REST APIs, Sockets
+
+Website:
+http://www.shashankkumar.me
