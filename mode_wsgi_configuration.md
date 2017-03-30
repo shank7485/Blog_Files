@@ -64,7 +64,7 @@ Apache conf:
         SSLCertificateFile /etc/apache2/ssl/apache.crt
         SSLCertificateKeyFile /etc/apache2/ssl/apache.key
 
-</VirtualHost>
+     </VirtualHost>
    ```
    
    default-ssl.conf
@@ -90,9 +90,9 @@ Apache conf:
                         nokeepalive ssl-unclean-shutdown \
                         downgrade-1.0 force-response-1.0
         BrowserMatch "MSIE [17-9]" ssl-unclean-shutdown
-    	</VirtualHost>
-	</IfModule>
-	```
+     </VirtualHost>
+    </IfModule>
+    ```
    
 mod_wsgi - https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps
 SSL - https://www.digitalocean.com/community/tutorials/how-to-create-a-ssl-certificate-on-apache-for-ubuntu-14-04
