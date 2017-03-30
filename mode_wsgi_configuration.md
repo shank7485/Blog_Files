@@ -96,11 +96,22 @@ Apache conf:
 
 ```    
 sudo apt-get update
+```
+```
 sudo apt-get install apache2
+```
+```
 sudo apt-get install libapache2-mod-wsgi python-dev
+```
+```
 sudo a2enmod wsgi
+```
+```
 sudo mkdir /var/www/api
+```
+```
 sudo vi /var/www/api/api.py # Copy contents
+```
 sudo vi /var/www/api/api.wsgi # Copy contents
 sudo vi /etc/apache2/sites-available/api.conf # Copy Contents
 cd /var/www/api
