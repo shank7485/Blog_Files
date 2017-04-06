@@ -1,45 +1,30 @@
 API endpoint:
-/home/ubuntu/api/
+/home/ubuntu/Assistant-for-Software-Defined-Infrastructure/
    api.py
    api.wsgi
    
-   api.py:
-   ```
-    from flask import Flask
-
-
-    app = Flask(__name__)
-
-    @app.route('/')
-    def hello_world():
-        return 'API is working.'
-
-
-    if __name__ == '__main__':
-        app.run(debug=True,host='0.0.0.0')
-   ```
-   
+   Add the following in api.wsgi
    api.wsgi:
    ```
     #!/usr/bin/python
 
     import sys
-    sys.path.insert(0, '/home/ubuntu/api/')
+    sys.path.insert(0, '/home/ubuntu/Assistant-for-Software-Defined-Infrastructure/')
 
     from api import app as application
    ```
 
 Apache conf:
 /etc/apache2/sites-available/
-  api.conf
+  assistant.conf
   
-  api.conf:
+  assistant.conf:
   ```
     <VirtualHost *:80>
 	    ServerName localhost
-	    ServerAdmin shashank@localhost
-	    WSGIScriptAlias / /home/ubuntu/api/api.wsgi
-	    <Directory /home/ubuntu/api/>
+	    ServerAdmin ubuntu@localhost
+	    WSGIScriptAlias / /home/ubuntu/Assistant-for-Software-Defined-Infrastructure/api.wsgi
+	    <Directory /home/ubuntu/Assistant-for-Software-Defined-Infrastructure/>
 		      Require all granted
 	    </Directory>
 	    ErrorLog ${APACHE_LOG_DIR}/error.log
@@ -49,9 +34,9 @@ Apache conf:
     
     <VirtualHost *:443>
         ServerName localhost
-        ServerAdmin shashank@localhost
-        WSGIScriptAlias / /home/ubuntu/api/api.wsgi
-        <Directory /home/ubuntu/api/>
+        ServerAdmin ubuntu@localhost
+        WSGIScriptAlias / /home/ubuntu/Assistant-for-Software-Defined-Infrastructure/api.wsgi
+        <Directory /home/ubuntu/Assistant-for-Software-Defined-Infrastructure/>
 		      Require all granted
         </Directory>
         ErrorLog ${APACHE_LOG_DIR}/error.log
@@ -69,10 +54,10 @@ Apache conf:
    ```
    	<IfModule mod_ssl.c>
     		<VirtualHost _default_:443>
-        		ServerAdmin shashank@localhost
+        		ServerAdmin ubuntu@localhost
         		ServerName localhost
        			ServerAlias localhost
-        		DocumentRoot /home/ubuntu/api/
+        		DocumentRoot /home/ubuntu/Assistant-for-Software-Defined-Infrastructure/
         		ErrorLog ${APACHE_LOG_DIR}/error.log
         		CustomLog ${APACHE_LOG_DIR}/access.log combined
         		SSLEngine on
@@ -97,19 +82,23 @@ sudo apt-get update
 sudo apt-get install apache2
 sudo apt-get install libapache2-mod-wsgi python-dev
 sudo a2enmod wsgi
-sudo mkdir /home/ubuntu/api
-sudo vi /home/ubuntu/api/api.py # Copy contents
-sudo vi /home/ubuntu/api/api.wsgi # Copy contents
-sudo vi /etc/apache2/sites-available/api.conf # Copy Contents
-sudo a2ensite api
+cd /home/ubuntu/
+git clone https://github.com/shank7485/Assistant-for-Software-Defined-Infrastructure.git
+# Copy api.wsgi contents
+sudo vi /home/ubuntu/Assistant-for-Software-Defined-Infrastructure/api.wsgi
+# Copy assistant.conf contents
+sudo vi /etc/apache2/sites-available/assistant.conf
+sudo a2ensite assistant
 sudo service apache2 restart
 /etc/init.d/apache2 restart
 sudo a2enmod ssl
 sudo service apache2 restart
 /etc/init.d/apache2 restart
 sudo mkdir /etc/apache2/ssl
+# Generate Cert and Keys. (test keys)
 sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/apache2/ssl/apache.key -out /etc/apache2/ssl/apache.crt
-sudo vi /etc/apache2/sites-available/default-ssl.conf # Copy contents
+# Copy default-ssl.conf contents
+sudo vi /etc/apache2/sites-available/default-ssl.conf
 sudo a2ensite default-ssl.conf
 sudo service apache2 restart
 /etc/init.d/apache2 restart
