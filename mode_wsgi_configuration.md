@@ -1,5 +1,5 @@
 API endpoint:
-/var/www/api/
+/home/ubuntu/api/
    api.py
    api.wsgi
    
