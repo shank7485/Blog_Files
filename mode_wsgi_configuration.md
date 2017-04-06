@@ -4,7 +4,7 @@ API endpoint:
    api.wsgi
    
    Add the following in api.wsgi
-   api.wsgi:
+
    ```
     #!/usr/bin/python
 
