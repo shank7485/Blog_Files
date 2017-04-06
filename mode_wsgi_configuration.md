@@ -24,7 +24,7 @@ API endpoint:
     #!/usr/bin/python
 
     import sys
-    sys.path.insert(0, '/var/www/api/')
+    sys.path.insert(0, '/home/ubuntu/api/')
 
     from api import app as application
    ```
@@ -38,10 +38,9 @@ Apache conf:
     <VirtualHost *:80>
 	    ServerName localhost
 	    ServerAdmin shashank@localhost
-	    WSGIScriptAlias / /var/www/api/api.wsgi
-	    <Directory /var/www/api/>
-		      Order allow,deny
-		      Allow from all
+	    WSGIScriptAlias / /home/ubuntu/api/api.wsgi
+	    <Directory /home/ubuntu/api/>
+		      Require all granted
 	    </Directory>
 	    ErrorLog ${APACHE_LOG_DIR}/error.log
 	    LogLevel warn
@@ -51,10 +50,9 @@ Apache conf:
     <VirtualHost *:443>
         ServerName localhost
         ServerAdmin shashank@localhost
-        WSGIScriptAlias / /var/www/api/api.wsgi
-        <Directory /var/www/api/>
-                Order allow,deny
-                Allow from all
+        WSGIScriptAlias / /home/ubuntu/api/api.wsgi
+        <Directory /home/ubuntu/api/>
+		      Require all granted
         </Directory>
         ErrorLog ${APACHE_LOG_DIR}/error.log
         LogLevel warn
@@ -74,7 +72,7 @@ Apache conf:
         		ServerAdmin shashank@localhost
         		ServerName localhost
        			ServerAlias localhost
-        		DocumentRoot /var/www/api/
+        		DocumentRoot /home/ubuntu/api/
         		ErrorLog ${APACHE_LOG_DIR}/error.log
         		CustomLog ${APACHE_LOG_DIR}/access.log combined
         		SSLEngine on
@@ -99,11 +97,10 @@ sudo apt-get update
 sudo apt-get install apache2
 sudo apt-get install libapache2-mod-wsgi python-dev
 sudo a2enmod wsgi
-sudo mkdir /var/www/api
-sudo vi /var/www/api/api.py # Copy contents
-sudo vi /var/www/api/api.wsgi # Copy contents
+sudo mkdir /home/ubuntu/api
+sudo vi /home/ubuntu/api/api.py # Copy contents
+sudo vi /home/ubuntu/api/api.wsgi # Copy contents
 sudo vi /etc/apache2/sites-available/api.conf # Copy Contents
-cd /var/www/api
 sudo a2ensite api
 sudo service apache2 restart
 /etc/init.d/apache2 restart
